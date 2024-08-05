@@ -10,44 +10,59 @@ body {
 }
 
 .container {
+    width: 60%; /* Adjust this value to make the container larger */
     background-color: #fff;
-    padding: 20px;
+    padding: 40px; /* Increased padding for better aesthetics */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-h1, h2 {
+h1 {
     color: #333;
+    font-size: 3em; /* Increased font size for the title */
+    margin-bottom: 20px;
 }
 
 p {
-    font-size: 1.2em;
+    font-size: 1.5em; /* Increased font size for the description */
     color: #666;
+    margin-bottom: 30px;
 }
 
 .file-descriptions {
-    text-align: left;
-    list-style-type: none;
+    display: inline-block; /* Fit the list items to content width */
+    text-align: left; /* Align text to the left */
     padding: 0;
-    margin: 20px 0;
+    margin: 0 auto;
+    position: relative; /* For absolute positioning of pseudo elements */
 }
 
 .file-descriptions li {
-    font-size: 1em;
+    font-size: 1.2em;
     margin: 10px 0;
+    padding-left: 1em; /* Indent text for alignment */
+    position: relative;
+}
+
+.file-descriptions li::before {
+    content: ""; /* Empty content for alignment */
+    position: absolute;
+    left: 0; /* Align to the left of the container */
+    top: 0;
+    width: 1em; /* Width of the indent */
 }
 
 .button-container {
     display: flex;
     justify-content: center;
-    gap: 10px;
-    margin-top: 20px;
+    gap: 20px; /* Increased gap between buttons */
+    margin-top: 30px;
 }
 
 .button {
     display: inline-block;
-    padding: 10px 20px;
-    font-size: 1em;
+    padding: 12px 25px; /* Adjusted padding for buttons to be slightly smaller */
+    font-size: 1.3em; /* Adjusted font size for buttons to be slightly smaller */
     color: #fff;
     background-color: #007bff;
     text-decoration: none;
