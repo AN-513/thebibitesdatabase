@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serie 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Serie 1</h1>
+        <p>Here are all the files from the Serie 1:</p>
+        <div class="button-container">
+            <button class="button" onclick="downloadFile('serie1/160h.zip')">160h.zip</button>
+            <button class="button" onclick="downloadFile('serie1/200.zip')">200.zip</button>
+        </div>
+        <a href="index.html" class="button">Back to Main Menu</a>
+    </div>
+
+    <script>
+        function downloadFile(fileName) {
+            var a = document.createElement('a');
+            a.href = fileName; // The file is expected to be in the same directory as the HTML file
+            a.download = fileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+        }
+    </script>
+</body>
+</html>
