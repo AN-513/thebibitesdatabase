@@ -9,23 +9,24 @@
 <body>
     <div class="container">
         <h1>Serie 1</h1>
-        <p>Here are all the files from the Serie 1:</p>
-        <div class="button-container">
-            <button class="button" onclick="downloadFile('serie1/160h.zip')">160h.zip</button>
-            <button class="button" onclick="downloadFile('serie1/200.zip')">200.zip</button>
-        </div>
-        <a href="index.html" class="button">Back to Main Menu</a>
-    </div>
+        <p>Here are all the files from Serie 1:</p>
+        
+        <ul class="file-descriptions">
+            <li><strong>The Bibites V0.5.1:</strong> The latest version of The Bibites simulation software.</li>
+            <li><strong>Default World:</strong> The standard world environment setup for The Bibites.</li>
+            <li><strong>Max 500 Bibites:</strong> A configuration file allowing up to 500 Bibites in the simulation.</li>
+            <li><strong>Default values:</strong> Configuration file with default values for the simulation settings.</li>
+        </ul>
 
-    <script>
-        function downloadFile(fileName) {
-            var a = document.createElement('a');
-            a.href = fileName; // The file is expected to be in the same directory as the HTML file
-            a.download = fileName;
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-        }
-    </script>
+        <h2>Download Files</h2>
+        <div class="button-container">
+            <a href="160h.zip" download="160h.zip" class="button">160h.zip</a>
+            <a href="200.zip" download="200.zip" class="button">200.zip</a>
+        </div>
+        
+        <div class="button-container">
+            <a href="index.html" class="button">Back to Main Menu</a>
+        </div>
+    </div>
 </body>
 </html>
